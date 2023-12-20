@@ -1,0 +1,113 @@
+.nav-ul li {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid transparent; /* Set a transparent border by default */
+}
+
+.nav-ul li:hover {
+
+  border-color: white; /* Change only the border color on hover */
+  border-radius: 15px;
+  margin: 0px;
+}
+
+.nav-ul li:hover a {
+
+  border-color: transparent; /* Set a transparent border for the anchor element on hover */
+}
+
+.nav-ul li a {
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  border: 1px solid transparent; /* Set a transparent border by default */
+}
+
+.nav-ul {
+  padding: 5px;
+  margin: 0px;
+  background-color: #4494b4;
+}
+
+.footer{
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  height: 25px;
+  background-color: #4494b4;
+}
+.signupContainer , .products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh; /* Use the full height of the viewport */
+}
+
+.signupContainer button{
+  background-color: #4494b4;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+h1 {
+  color: #3498db;
+}
+.loginContainer{
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh; /* Use the full height of the viewport */
+}
+.loginContainer button, .products button{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #4494b4;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+.invalid-input{
+  color: red;
+  margin-top: -9px;
+  display: block;
+  margin-left: 10px;
+}
+.rightSide{
+  text-align: right;
+}
+.logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.inputBox{
+  display: block;
+  margin: 10px;
+  padding: 5px;
+}
+.product-list{
+  text-align: center;
+  margin-top: 50px;
+
+}
+.product-list ul li{
+  display: inline-block;
+  border: 1px solid #4494b4;
+  padding: 5px;
+  width: 150px;
+  
+}
+.searchbox{
+  width: 400px;
+  padding: 1px;
+  border: 2px solid #4494b4;
+  border-radius: 5px;
+  margin: 20px;
+}
