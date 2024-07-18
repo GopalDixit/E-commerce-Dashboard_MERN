@@ -13,36 +13,37 @@ const Login = () => {
         }
       })
       const handleClick = async () => {
-        console.log(name, password);
-        try {
-            let result = await fetch('http://localhost:5600/login', {
-                method: 'post',
-                body: JSON.stringify({ name, password }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-    
-            if (!result.ok) {
-                throw new Error('Network response was not ok');
+    console.log(name, password);
+    try {
+        let result = await fetch('https://e-commerce-dashboard-mern-4.onrender.com/login', {
+            method: 'post',
+            body: JSON.stringify({ name, password }),
+            headers: {
+                'Content-Type': 'application/json'
             }
-    
-            const data = await result.json();
-            console.log(data);
-    
-            if (data.SecretToken) {
-                localStorage.setItem('user', JSON.stringify(data.userdata));
-                localStorage.setItem('token', JSON.stringify(data.SecretToken));
+        });
 
-                navigate('/');
-            } else {
-                alert("Please enter correct details");
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-            alert("An error occurred during login. Please try again.");
+        if (!result.ok) {
+            throw new Error('Network response was not ok');
         }
-    };
+
+        const data = await result.json();
+        console.log(data);
+
+        if (data.SecretToken) {
+            localStorage.setItem('user', JSON.stringify(data.userdata));
+            localStorage.setItem('token', JSON.stringify(data.SecretToken));
+
+            navigate('/');
+        } else {
+            alert("Please enter correct details");
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        alert("An error occurred during login. Please try again.");
+    }
+};
+
     
 
   return (
