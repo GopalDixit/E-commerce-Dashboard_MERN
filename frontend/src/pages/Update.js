@@ -15,7 +15,7 @@ const Update = () => {
 
     const getProductDetails =async ()=>{
         console.log(name,price,brand);
-        let result = await fetch(`http://localhost:5600/product/${params.id}`,{
+        let result = await fetch(`https://e-commerce-dashboard-mern-4.onrender.com/product/${params.id}`,{
             headers:{
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
               }
@@ -26,7 +26,7 @@ const Update = () => {
         setBrand(result.brand)
     }
     const handleClick = async () => {
-        let result = await fetch(`http://localhost:5600/product/${params.id}`,{
+        let result = await fetch(`https://e-commerce-dashboard-mern-4.onrender.com/product/${params.id}`,{
             method:'put',
             body:JSON.stringify({name,price,brand}),
             headers:{
