@@ -7,7 +7,7 @@ const Product = () => {
         getProduct()
     },[])
     const getProduct =async ()=>{
-        let result =await fetch('http://localhost:5600/products',{
+        let result =await fetch('https://e-commerce-dashboard-mern-4.onrender.com/products',{
           headers:{
             authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
           }
@@ -18,7 +18,7 @@ const Product = () => {
     console.log(product);
 
     const handleDelete =async (id)=>{
-      let result =await fetch(`http://localhost:5600/product/${id}`,{
+      let result =await fetch(`https://e-commerce-dashboard-mern-4.onrender.com/product/${id}`,{
         method:"Delete",
         headers:{authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
       }})
@@ -30,7 +30,7 @@ const Product = () => {
     const handleSearch = async(event)=>{
       // console.log(event.target.value);
       let key = event.target.value
-      let result =await fetch(`http://localhost:5600/search/${key}`)
+      let result =await fetch(`https://e-commerce-dashboard-mern-4.onrender.com/search/${key}`)
       result= await result.json()
       if(result)
       {
