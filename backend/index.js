@@ -10,7 +10,10 @@ const jwtKey = "E-comm" // It should be secret
 const app = express();
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: 'https://e-commerce-dashboard-mern-s12w.vercel.app'
+}));
+
 
 app.post('/signup',async (req,resp)=>{
     let userdata =new user(req.body);
