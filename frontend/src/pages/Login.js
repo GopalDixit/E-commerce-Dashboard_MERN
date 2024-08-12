@@ -15,7 +15,7 @@ const Login = () => {
       const handleClick = async () => {
     console.log(name, password);
     try {
-        let result = await fetch('https://e-commerce-dashboard-mern-4.onrender.com/login', {
+        let result = await fetch('https://e-commerce-dashboard-mern-7.onrender.com/login', {
             method: 'post',
             body: JSON.stringify({ name, password }),
             headers: {
