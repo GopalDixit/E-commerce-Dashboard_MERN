@@ -15,7 +15,7 @@ const Signup = () => {
 
   const handleClick = async () => {
     try {
-      const response = await axios.post('https://e-commerce-dashboard-mern-4.onrender.com/signup', { name, password }, {
+      const response = await axios.post('https://e-commerce-dashboard-mern-7.onrender.com/signup', { name, password }, {
         headers: {
           'Content-Type': 'application/json'
         }
